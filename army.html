@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARMY</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500&display=swap");
+    body { margin: 0; background-color: #1a1a1a; color: #FFFFFFDD; position: relative; overflow: hidden; font-family: "Inter", sans-serif; }
+    .card { position: absolute; left: 0; top: 0; background-position: center; background-size: cover; box-shadow: rgba(0,0,0,0.4) 0px 2px 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2) 0px -3px 0px inset; }
+    .card-content { position: absolute; left: 0; top: 0; color: #FFFFFFDD; padding-left: 16px; }
+    .content-place { margin-top: 6px; font-size: 13px; font-weight: 500; }
+    .content-title-1, .content-title-2 { font-weight: 600; font-size: 20px; font-family: "Oswald", sans-serif; }
+    .content-start { width: 30px; height: 5px; border-radius: 99px; background-color: #FFFFFFDD; }
+    .details { z-index: 22; position: absolute; top: 240px; left: 60px; }
+    .details .place-box { height: 46px; overflow: hidden; }
+    .details .place-box .text { padding-top: 16px; font-size: 20px; }
+    .details .place-box .text:before { top: 0; left: 0; position: absolute; content: ""; width: 30px; height: 4px; border-radius: 99px; background-color: white; }
+    .details .title-1, .details .title-2 { font-weight: 600; font-size: 72px; font-family: "Oswald", sans-serif; }
+    .details .title-box-1, .details .title-box-2 { margin-top: 2px; height: 100px; overflow: hidden; }
+    .details > .desc { margin-top: 16px; width: 500px; }
+    .details > .cta { width: 500px; margin-top: 24px; display: flex; align-items: center; }
+    .details > .cta > .bookmark { border: none; background-color: #ff0000; width: 36px; height: 36px; border-radius: 99px; color: white; display: grid; place-items: center; }
+    .details > .cta > .star { border: none; background-color: #ffbf00; width: 36px; height: 36px; border-radius: 99px; color: white; display: grid; place-items: center; }
+    .details > .cta > .discover { border: 1px solid #ffffff; background-color: transparent; height: 36px; border-radius: 99px; color: #ffffff; padding: 4px 24px; font-size: 12px; margin-left: 16px; text-transform: uppercase; cursor: pointer; }
+    nav { position: absolute; left: 0; top: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 20px 36px; font-weight: 500; width: 80%; }
+    .indicator { position: fixed; left: 0; right: 0; top: 0; height: 8px; z-index: 60; background-color: #ff0000; }
+    .pagination { position: absolute; left: 0px; top: 0px; display: inline-flex; }
+    .pagination > .arrow { z-index: 60; width: 50px; height: 50px; border-radius: 999px; border: 2px solid #ffffff55; display: grid; place-items: center; cursor: pointer; }
+    .pagination > .arrow:nth-child(2) { margin-left: 20px; }
+    .pagination > .arrow svg { width: 24px; height: 24px; stroke-width: 2; color: #ffffff99; }
+    .pagination .progress-sub-container { margin-left: 24px; z-index: 60; width: 500px; height: 50px; display: flex; align-items: center; }
+    .pagination .progress-sub-container .progress-sub-background { width: 500px; height: 3px; background-color: #ffffff33; }
+    .pagination .progress-sub-container .progress-sub-background .progress-sub-foreground { height: 3px; background-color: #ff0000; }
+    .pagination .slide-numbers { width: 50px; height: 50px; overflow: hidden; z-index: 60; position: relative; }
+    .pagination .slide-numbers .item { width: 50px; height: 50px; position: absolute; color: white; top: 0; left: 0; display: grid; place-items: center; font-size: 32px; font-weight: bold; }
+    .cover { position: absolute; left: 0; top: 0; width: 100vw; height: 100vh; background-color: #fff; z-index: 100; }
+    .logo { width: 100px; cursor: pointer; margin: 20px; border-radius: 50%; }
+    nav a { color: #ff0000; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <img src="logo.png" class="logo">
+    <a href="army.html">INDIAN ARMY</a>
+    <a href="IAF.HTML">INDIAN AIR FORCE</a>
+    <a href="NAVY.HTML">INDIAN NAVY</a>
+  </nav>
+  <div id="demo"></div>
+
+  <div class="details" id="details-even">
+    <div class="place-box"><div class="text">INDIAN ARMY</div></div>
+    <div class="title-box-1"><div class="title-1">AK</div></div>
+    <div class="title-box-2"><div class="title-2">47</div></div>
+    <div class="desc">The Indian Army also uses a large number of AK-47 rifles, which are widely used by its troops. These rifles are imported from countries like Russia and Romania.</div>
+    <div class="cta">
+      <button class="bookmark"><i class='bx bx-bookmarks'></i></button>&nbsp;
+      <button class="star"><i class='bx bx-star'></i></button>
+      <button class="discover"><i class='bx bx-search-alt'></i> Discover More</button>
+    </div>
+  </div>
+
+  <div class="details" id="details-odd">
+    <div class="place-box"><div class="text">INDIAN ARMY</div></div>
+    <div class="title-box-1"><div class="title-1">AK</div></div>
+    <div class="title-box-2"><div class="title-2">47</div></div>
+    <div class="desc">The Indian Army also uses a large number of AK-47 rifles, which are widely used by its troops. These rifles are imported from countries like Russia and Romania.</div>
+    <div class="cta">
+      <button class="bookmark"><i class='bx bx-bookmarks'></i></button>&nbsp;
+      <button class="star"><i class='bx bx-star'></i></button>
+      <button class="discover"><i class='bx bx-search-alt'></i> Discover More</button>
+    </div>
+  </div>
+
+  <div class="pagination" id="pagination">
+    <div class="arrow arrow-left">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+      </svg>
+    </div>
+    <div class="arrow arrow-right">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+      </svg>
+    </div>
+    <div class="progress-sub-container">
+      <div class="progress-sub-background">
+        <div class="progress-sub-foreground"></div>
+      </div>
+    </div>
+    <div class="slide-numbers" id="slide-numbers"></div>
+  </div>
+
+  <div class="cover"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'></script>
+  <script src="./army.js"></script>
+</body>
+</html>
